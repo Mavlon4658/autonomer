@@ -286,17 +286,134 @@ button, input {
   }
 }
 
+.exclusive {
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 1200px) {
+  .exclusive {
+    margin-bottom: 16px;
+  }
+}
+.exclusive__in {
+  padding: 40px 56px;
+  border-radius: 16px;
+  background: White;
+}
+@media screen and (max-width: 1200px) {
+  .exclusive__in {
+    border-radius: 8px;
+    padding: 16px 12px;
+    border-top: 6px solid #1976D2;
+  }
+}
+.exclusive__head h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 41.6px;
+  color: #0E0E0E;
+}
+.exclusive_btns {
+  gap: 16px;
+}
+.exclusive .exclusive_btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #DDDDDD;
+}
+
+.contact__map {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media screen and (max-width: 1200px) {
+  .contact__map {
+    margin-bottom: 12px;
+    gap: 0;
+  }
+}
+.contact__map h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 41.6px;
+  color: #0E0E0E;
+}
+@media screen and (max-width: 1200px) {
+  .contact__map h6 {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+.contact__map p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #333333;
+}
+@media screen and (max-width: 1200px) {
+  .contact__map p {
+    margin: 8px 0 20px 0;
+  }
+}
 .contact__in {
   padding: 40px 56px;
   border-radius: 16px;
   background: White;
 }
+@media screen and (max-width: 1200px) {
+  .contact__in {
+    border-radius: 8px;
+    padding: 16px 12px;
+  }
+}
+.contact_btn {
+  margin-top: 24px;
+  background: transparent;
+  border: 1px solid #F44336;
+  transition: 0.3s ease;
+  height: 36px;
+  padding: 6px 16px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #F44336;
+}
+.contact_btn svg path {
+  transition: 0.3s ease;
+}
+@media screen and (max-width: 1200px) {
+  .contact_btn {
+    margin-top: 12px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contact_btn {
+    width: 100%;
+  }
+}
+.contact_btn:hover {
+  color: White;
+  background-color: #F44336;
+}
+.contact_btn:hover svg path {
+  fill: White;
+}
 .contact__list {
   border-radius: 8px;
 }
 .contact__list .number {
+  flex-shrink: 0;
   width: 24px;
-  border: 1px solid red;
+}
+@media screen and (max-width: 1200px) {
+  .contact__list .number {
+    display: none;
+  }
 }
 .contact__list .number h5 {
   font-size: 16px;
@@ -306,7 +423,11 @@ button, input {
 }
 .contact__list .title {
   width: 560px;
-  border: 1px solid red;
+}
+@media screen and (max-width: 1200px) {
+  .contact__list .title {
+    width: 100%;
+  }
 }
 .contact__list .title h4 {
   font-size: 14px;
@@ -314,9 +435,50 @@ button, input {
   line-height: 21px;
   color: #333333;
 }
+.contact__list .note {
+  position: relative;
+}
+.contact__list .note:hover .toltip {
+  display: flex;
+}
+.contact__list .note .toltip {
+  z-index: 2;
+  display: none;
+  width: 289px;
+  position: absolute;
+  bottom: 100%;
+  left: -70px;
+  right: 0;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: White;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #0E0E0E;
+}
+@media screen and (max-width: 1200px) {
+  .contact__list .note .toltip {
+    left: -25px;
+  }
+}
+.contact__list .note .toltip svg {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.contact__list .note a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 .contact__list .phone {
+  flex-shrink: 0;
   width: 154px;
-  border: 1px solid red;
 }
 .contact__list .phone a {
   font-size: 14px;
@@ -328,9 +490,13 @@ button, input {
 }
 .contact__list .address {
   width: 314px;
-  border: 1px solid red;
 }
-.contact__list .address span {
+@media screen and (max-width: 1200px) {
+  .contact__list .address {
+    width: 100%;
+  }
+}
+.contact__list .address .map_link {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -345,17 +511,45 @@ button, input {
   padding: 14px 24px;
   gap: 26px;
 }
+@media screen and (max-width: 1200px) {
+  .contact__list-head {
+    display: none;
+  }
+}
 .contact__list-head h6 {
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   color: White;
 }
+.contact__list-content {
+  border: 1px solid #DDDDDD;
+  border-radius: 0 0 8px 8px;
+}
+@media screen and (max-width: 1200px) {
+  .contact__list-content {
+    border: none;
+    gap: 12px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .contact__list-content.active .contact__list-block:nth-child(n+3) {
+    display: none !important;
+  }
+}
 .contact__list-block {
   background-color: #1976D2;
   padding: 8px 24px 21px 24px;
   gap: 26px;
   background-color: #DDDDDD;
+}
+@media screen and (max-width: 1200px) {
+  .contact__list-block {
+    border-radius: 8px;
+    padding: 16px 12px;
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 .contact__list-block:nth-child(odd) {
   background-color: #F7F7F7;

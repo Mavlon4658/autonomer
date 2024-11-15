@@ -16,3 +16,22 @@ footerTitle.addEventListener('click', () => {
 })
 
 
+let swiper = new Swiper(".exclusiveSwiper", {
+    spaceBetween: 16,
+    navigation: {
+        nextEl: ".exclusive-button-next",
+        prevEl: ".exclusive-button-prev",
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 4,
+        },
+        1024: {
+            slidesPerView: 5,
+        },
+    },
+});
+
