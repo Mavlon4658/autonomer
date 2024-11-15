@@ -14,6 +14,7 @@ bars.onclick = () => {
     bars.classList.toggle('active');
     if (bars.classList.contains('active')) {
         bodyHidden();
+        window.scrollTo(0,0);
     } else {
         bodyVisible();
     }
