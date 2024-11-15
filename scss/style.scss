@@ -47,6 +47,25 @@ button, input {
         &:active {
             background: #FF574A;
         }
+
+        &_border {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 8px;
+            width: 100%;
+            border: 1px solid $color-prim1;
+            border-radius: 4px;
+            padding: 6px;
+
+            span {
+                font-size: 14px;
+                line-height: 150%;
+                font-weight: bold;
+                color: $color-prim1;
+            }
+        }
     }
 
     &-gray {

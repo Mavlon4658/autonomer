@@ -6,6 +6,13 @@ bars.onclick = () => {
     bars.classList.toggle('active');
 }
 
+const likes = document.querySelectorAll('.like');
+
+likes.forEach(el => {
+    el.onclick = () => {
+        el.classList.toggle('active');
+    }
+})
 
 let footerTitle = document.querySelector('.footer__bottom-title');
 let footerRight = document.querySelector('.footer__bottom-right');
