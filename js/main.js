@@ -1,9 +1,22 @@
+const bodyHidden = () => {
+    document.querySelector('body').style.overflow = 'hidden';
+}
+
+const bodyVisible = () => {
+    document.querySelector('body').style.overflow = 'visible';
+}
+
 const bars = document.querySelector('.header__bars');
 const blockTop = document.querySelector('.block-top');
 
 bars.onclick = () => {
     blockTop.classList.toggle('active');
     bars.classList.toggle('active');
+    if (bars.classList.contains('active')) {
+        bodyHidden();
+    } else {
+        bodyVisible();
+    }
 }
 
 const likes = document.querySelectorAll('.like');
