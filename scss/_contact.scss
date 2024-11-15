@@ -1,0 +1,90 @@
+.contact {
+
+  &__in {
+    padding: 40px 56px;
+    border-radius: 16px;
+    background: $color-white;
+  }
+
+  &__list {
+    border-radius: 8px;
+
+    .number {
+      width: 24px;
+      border: 1px solid red;
+
+      h5 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $color-gray1;
+      }
+    }
+
+    .title {
+      width: 560px;
+      border: 1px solid red;
+
+      h4 {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        color: $color-gray1;
+      }
+    }
+
+    .phone {
+      width: 154px;
+      border: 1px solid red;
+
+      a {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21px;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        color: $color-almost-black;
+      }
+    }
+
+    .address {
+      width: 314px;
+      border: 1px solid red;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        color: $color-prim1;
+      }
+    }
+
+    &-head {
+      border-radius: 8px 8px 0 0;
+      background-color: $color-prim2;
+      padding: 14px 24px;
+      gap: 26px;
+
+      h6 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        color: $color-white;
+      }
+    }
+
+    &-block {
+      background-color: $color-prim2;
+      padding: 8px 24px 21px 24px;
+      gap: 26px;
+      background-color: $color-gray3;
+
+      &:nth-child(odd) {
+        background-color: $color-gray5;
+      }
+    }
+  }
+}

@@ -284,4 +284,211 @@ button, input {
   .jumbo__title {
     font-size: 29px;
   }
+}
+
+.contact__in {
+  padding: 40px 56px;
+  border-radius: 16px;
+  background: White;
+}
+.contact__list {
+  border-radius: 8px;
+}
+.contact__list .number {
+  width: 24px;
+  border: 1px solid red;
+}
+.contact__list .number h5 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #333333;
+}
+.contact__list .title {
+  width: 560px;
+  border: 1px solid red;
+}
+.contact__list .title h4 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+}
+.contact__list .phone {
+  width: 154px;
+  border: 1px solid red;
+}
+.contact__list .phone a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  color: #0E0E0E;
+}
+.contact__list .address {
+  width: 314px;
+  border: 1px solid red;
+}
+.contact__list .address span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #F44336;
+}
+.contact__list-head {
+  border-radius: 8px 8px 0 0;
+  background-color: #1976D2;
+  padding: 14px 24px;
+  gap: 26px;
+}
+.contact__list-head h6 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: White;
+}
+.contact__list-block {
+  background-color: #1976D2;
+  padding: 8px 24px 21px 24px;
+  gap: 26px;
+  background-color: #DDDDDD;
+}
+.contact__list-block:nth-child(odd) {
+  background-color: #F7F7F7;
+}
+
+.footer {
+  padding: 16px 0 24px 0;
+  background-color: White;
+  margin-top: 64px;
+}
+@media screen and (max-width: 1200px) {
+  .footer {
+    margin-top: 24px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer {
+    border-radius: 16px 16px 0 0;
+  }
+}
+.footer__top {
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #DDDDDD;
+}
+.footer__top-link {
+  gap: 24px;
+}
+@media screen and (max-width: 576px) {
+  .footer__top-link {
+    gap: 12px;
+  }
+}
+.footer__top-link a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #333333;
+  transition: 0.2s linear;
+}
+.footer__top-link a:hover {
+  color: #DDDDDD;
+}
+.footer__bottom {
+  padding-top: 24px;
+  gap: 24px;
+}
+@media screen and (max-width: 1200px) {
+  .footer__bottom {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer__bottom {
+    gap: 16px;
+  }
+}
+.footer__bottom-right {
+  gap: 70px;
+  transition: 0.3s linear;
+}
+@media screen and (max-width: 1350px) {
+  .footer__bottom-right {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer__bottom-right {
+    gap: 12px;
+    height: 0;
+    overflow: hidden;
+  }
+}
+.footer__bottom-right.active {
+  height: 384px;
+}
+.footer__bottom-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #0E0E0E;
+  gap: 6px;
+  padding-right: 24px;
+  transition: 0.3s linear;
+  border-right: 1px solid #DDDDDD;
+}
+@media screen and (max-width: 1200px) {
+  .footer__bottom-title {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer__bottom-title {
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer__bottom-title br {
+    display: none;
+  }
+}
+.footer__bottom-title svg {
+  display: none;
+  transform: rotate(180deg);
+  transition: 0.3s linear;
+}
+@media screen and (max-width: 1200px) {
+  .footer__bottom-title svg {
+    display: flex;
+  }
+}
+.footer__bottom-title.active svg {
+  transform: rotate(0deg);
+}
+.footer__bottom ul {
+  gap: 12px;
+}
+.footer__bottom ul li {
+  display: inline-block;
+}
+.footer__bottom ul a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+  transition: 0.3s linear;
+}
+@media screen and (max-width: 576px) {
+  .footer__bottom ul a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.footer__bottom ul a:hover {
+  color: #DDDDDD;
 }/*# sourceMappingURL=style.css.map */

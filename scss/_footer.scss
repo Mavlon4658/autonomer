@@ -1,0 +1,140 @@
+.footer {
+  padding: 16px 0 24px 0;
+  background-color: $color-white;
+  margin-top: 64px;
+
+  @include media(1200) {
+    margin-top: 24px;
+  }
+
+  @include media(576) {
+    border-radius: 16px 16px 0 0;
+  }
+
+  &__top {
+    gap: 16px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $color-gray3;
+
+    &-link {
+      gap: 24px;
+
+      @include media(576) {
+        gap: 12px;
+      }
+
+      a {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $color-gray1;
+        transition: .2s linear;
+
+        &:hover {
+          color: $color-gray3;
+        }
+      }
+    }
+
+  }
+
+  &__bottom {
+    padding-top: 24px;
+    gap: 24px;
+
+    @include media(1200) {
+      gap: 16px;
+    }
+
+    @include media(576) {
+      gap: 16px;
+    }
+
+    &-right {
+      gap: 70px;
+      transition: .3s linear;
+
+      @include media(1350) {
+        gap: 40px;
+      }
+
+      @include media(1200) {
+        gap: 12px;
+        height: 0;
+        overflow: hidden;
+      }
+    }
+
+    &-right.active {
+      height: 384px;
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 26px;
+      color: $color-almost-black;
+      gap: 6px;
+      padding-right: 24px;
+      transition: .3s linear;
+      border-right: 1px solid $color-gray3;
+
+      @include media(1200) {
+        border-right: none;
+      }
+
+      @include media(576) {
+        cursor: pointer;
+      }
+
+      br {
+        @include media(1200) {
+          display: none;
+        }
+      }
+
+      svg {
+        display: none;
+        transform: rotate(180deg);
+        transition: .3s linear;
+
+        @include media(1200) {
+          display: flex;
+        }
+      }
+    }
+
+    &-title.active {
+
+      svg {
+        transform: rotate(0deg);
+      }
+    }
+
+    ul {
+      gap: 12px;
+
+
+      li {
+        display: inline-block;
+      }
+
+      a {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        color: $color-gray1;
+        transition: .3s linear;
+
+        @include media(576) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        &:hover {
+          color: $color-gray3;
+        }
+      }
+    }
+  }
+}
