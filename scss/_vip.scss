@@ -56,6 +56,20 @@
 
         @include media(991) {
             width: 100%;
+            gap: 16px 24px;
+        }
+
+        @include media(576) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        li {
+            @include media(576) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
 
         .car-price {
