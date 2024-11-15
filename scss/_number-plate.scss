@@ -21,6 +21,11 @@
         line-height: 0.7;
         width: 15px;
         text-align: center;
+
+        @include media(576) {
+            width: 11px;
+            font-size: 18px;
+        }
     }
 
     &__left {
@@ -30,6 +35,11 @@
         flex: 1 1 auto;
         padding: 0.3em;
         height: 1.6em;
+
+        @include media(576) {
+            padding: 0.2em;
+            height: 1.3em;
+        }
 
         &::before {
             content: "";
@@ -49,6 +59,11 @@
         width: 2em;
         height: 1.6em;
 
+        @include media(576) {
+            width: 1.5em;
+            height: 1.3em;
+        }
+
         &>* {
             height: 50%;
             display: flex;
@@ -62,6 +77,10 @@
         font-family: "Motor", sans-serif;
         padding-top: 0.2em;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+
+        @include media(576) {
+            font-size: 16px;
+        }
     }
 
     &__country {
@@ -71,6 +90,10 @@
         font-weight: bold;
         font-size: 10px;
         padding-top: 0.3em;
+
+        @include media(576) {
+            font-size: 8px;
+        }
     }
 
     &__num {
@@ -82,6 +105,10 @@
         width: 15px;
         text-align: center;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+
+        @include media(576) {
+            font-size: 26px;
+        }
     }
 
     &__flag {
@@ -93,6 +120,10 @@
         align-items: center;
         justify-content: center;
         margin-left: 0.2rem;
+
+        @include media(576) {
+            width: 10px;
+        }
 
         &::before {
             content: "";

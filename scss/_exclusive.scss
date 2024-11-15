@@ -18,17 +18,32 @@
   }
 
   &__head {
+    margin-bottom: 24px;
+
+    @include media(1200) {
+      margin-bottom: 12px;
+    }
+
     h3 {
       font-family: $font-roboto;
       font-size: 32px;
       font-weight: 700;
       line-height: 41.6px;
       color: $color-almost-black;
+
+      @include media(1200) {
+        font-size: 24px;
+        line-height: 31px;
+      }
     }
   }
 
   &_btns {
     gap: 16px;
+
+    @include media(576) {
+      display: none;
+    }
   }
 
   .exclusive_btn {
@@ -36,5 +51,64 @@
     height: 48px;
     border-radius: 50%;
     border: 1px solid $color-gray3;
+  }
+
+  .vip__numbers {
+    width: 100%;
+    background-color: $color-gray5;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+
+    h6 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 31.2px;
+      text-align: center;
+      color: $color-almost-black;
+
+      @include media(576) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+    }
+  }
+
+  .number_card {
+    background: transparent;
+    padding: 0;
+    gap: 0;
+
+    img {
+      width: 100%;
+      margin-bottom: 4px;
+    }
+  }
+
+  .number_card-price {
+    margin-top: 0 !important;
+  }
+
+  .car-price {
+    white-space: nowrap;
+
+    @include media(576) {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  .swiper-wrapper {
+    @include media(576) {
+      flex-wrap: wrap;
+      display: grid;
+      gap: 12px;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }

@@ -15,23 +15,94 @@ footerTitle.addEventListener('click', () => {
     footerTitle.classList.toggle('active');
 })
 
+let swiper;
 
-let swiper = new Swiper(".exclusiveSwiper", {
-    spaceBetween: 16,
-    navigation: {
-        nextEl: ".exclusive-button-next",
-        prevEl: ".exclusive-button-prev",
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 4,
-        },
-        1024: {
-            slidesPerView: 5,
-        },
-    },
-});
+function initSwiper() {
+    if (window.innerWidth >= 576) {
+        if (!swiper) {
+            swiper = new Swiper(".exclusiveSwiper", {
+                spaceBetween: 16,
+                slidesPerView: 2,
+                navigation: {
+                    nextEl: ".exclusive-button-next",
+                    prevEl: ".exclusive-button-prev",
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                    },
+                },
+            });
+        }
+    } else {
+        if (swiper) {
+            swiper.destroy(true, true);
+            swiper = null;
+        }
+        const swiperContainer = document.querySelector(".exclusiveSwiper");
+        swiperContainer.classList.remove("swiper-container");
+        const slides = document.querySelectorAll(".exclusiveSwiper .swiper-slide");
+        slides.forEach(slide => {
+            slide.classList.remove("swiper-slide");
+            slide.style.width = "100%";
+        });
+    }
+}
+
+initSwiper();
+
+window.addEventListener("resize", initSwiper);
+
+
+let numberSwiper;
+
+function initNumberSwiper() {
+    if (window.innerWidth >= 576) {
+        if (!numberSwiper) {
+            numberSwiper = new Swiper(".numberSwiper", {
+                spaceBetween: 16,
+                slidesPerView: 2,
+                navigation: {
+                    nextEl: ".number-button-next",
+                    prevEl: ".number-button-prev",
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                    },
+                },
+            });
+        }
+    } else {
+        if (numberSwiper) {
+            numberSwiper.destroy(true, true);
+            numberSwiper = null;
+        }
+        const swiperContainer = document.querySelector(".numberSwiper");
+        swiperContainer.classList.remove("swiper-container");
+        const slides = document.querySelectorAll(".numberSwiper .swiper-slide");
+        slides.forEach(slide => {
+            slide.classList.remove("swiper-slide");
+            slide.style.width = "100%";
+        });
+    }
+}
+
+initNumberSwiper();
+
+window.addEventListener("resize", initNumberSwiper);
+
+
 
