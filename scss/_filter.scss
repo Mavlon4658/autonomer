@@ -231,7 +231,7 @@
             &_item {
                 border: 1px solid $color-gray3;
                 border-radius: 4px;
-                width: 100px;
+                width: 100%;
 
                 @include media(1250) {
                     width: calc(50% - 6px);
