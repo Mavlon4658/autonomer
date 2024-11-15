@@ -1,0 +1,40 @@
+.exclusive {
+  margin-bottom: 24px;
+
+  @include media(1200) {
+    margin-bottom: 16px;
+  }
+
+  &__in {
+    padding: 40px 56px;
+    border-radius: 16px;
+    background: $color-white;
+
+    @include media(1200) {
+      border-radius: 8px;
+      padding: 16px 12px;
+      border-top: 6px solid $color-prim2;
+    }
+  }
+
+  &__head {
+    h3 {
+      font-family: $font-roboto;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 41.6px;
+      color: $color-almost-black;
+    }
+  }
+
+  &_btns {
+    gap: 16px;
+  }
+
+  .exclusive_btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid $color-gray3;
+  }
+}
