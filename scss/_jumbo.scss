@@ -1,0 +1,28 @@
+.jumbo {
+    z-index: 1;
+
+    &__bg {
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    .main-container {
+        padding: 32px 0;
+
+        @include media(991) {
+            padding: 43px 0;
+        }
+    }
+
+    &__title {
+        color: $color-almost-black;
+        font-size: 52px;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 130%;
+
+        @include media(991) {
+            font-size: 29px;
+        }
+    }
+}

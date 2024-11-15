@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// Fonts
+$font-exo-2: "Exo 2", sans-serif;
+$font-roboto: "Roboto", sans-serif;
+// Fonts end
+
+// Colors
+$color-white: White;
+$color-almost-black: #0E0E0E;
+$color-gray1: #333333;
+$color-gray2: #828282;
+$color-gray3: #DDDDDD;
+$color-gray4: #F1F1F1;
+$color-gray5: #F7F7F7;
+$color-bg: #EDEDED;
+$color-error: #DB371F;
+$color-prim1: #F44336;
+$color-green: #00AD2B;
+$color-prim2: #1976D2;
+$vip-gr: linear-gradient(#A67230, #E0C46D, #A97D38);
+// Colors end
+
+
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}

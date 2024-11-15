@@ -1,0 +1,23 @@
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 130%;
+    color: $color-white;
+    flex-shrink: 0;
+
+    @include media(991) {
+        font-size: 16px;
+    }
+
+    span {
+        padding: 8px 12px;
+
+        &:nth-child(1) {
+            background: $color-prim1;
+        }
+
+        &:nth-child(2) {
+            background: $color-prim2;
+        }
+    }
+}
